@@ -41,6 +41,69 @@ flowchart TD
 - CSS for styling  
 
 ---
+## API Usage 🛰️
+
+This repository provides a FastAPI backend for document ingestion and high-frequency Q&A.  
+You can interact with the API using standard HTTP requests or tools like `curl`, `httpie`, or Postman.
+
+### Endpoints
+
+#### 1. `/process_document/`  
+**POST**: Upload and process a financial PDF document.
+
+- **Parameters:**  
+  - `file`: PDF upload (form-data)
+- **Returns:**  
+  - Processing stats, chunk/embedding info, and success message
+
+**Example:**
+```bash
+curl -X POST "http://localhost:8000/process_document/" \
+     -F "file=@yourfile.pdf"
+```
+
+#### 2. `/ask/`  
+**POST**: Ask questions about the uploaded document.
+
+- **Parameters:**  
+  - `query`: Your question (form field)
+- **Returns:**  
+  - Answer from LLM, source contexts, and trace info
+
+**Example:**
+```bash
+curl -X POST "http://localhost:8000/ask/" \
+     -F "query=What are the key financial highlights?"
+```
+
+#### 3. `/status/`  
+**GET**: Check API/document status.
+
+- **Returns:**  
+  - Document processing status, stats, and chat history count
+
+**Example:**
+```bash
+curl "http://localhost:8000/status/"
+```
+
+---
+
+### Running the API
+
+```bash
+uvicorn api:app --reload
+```
+Default port is `8000`. Update as needed.
+
+---
+
+### Notes
+
+- The API maintains chat history for up to 20 exchanges.
+- Make sure the document is processed before asking questions.
+- Logs and errors are handled via the built-in logger.
+
 
 ## Quick Demo 🎬
 
