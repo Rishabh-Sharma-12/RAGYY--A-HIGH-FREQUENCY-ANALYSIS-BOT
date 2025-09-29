@@ -24,7 +24,7 @@ MAX_TURNS = 20
 
 # Page config
 st.set_page_config(
-    page_title="Tender-Bot AI Assistant",
+    page_title="Bot AI Assistant",
     page_icon="🤖",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -57,14 +57,14 @@ rag_pipeline = (
 )
 query_pipe = rag_query_runnable()
 
-with open('/Users/ssris/Desktop/RIMSAB/AI-MANTRA/RAG_TENDOR/utils/style.css') as f:
+with open('/utils/style.css') as f:
     css = f.read()
 
 st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 
 st.markdown("""
 <div class="main-header">
-    <h1>🤖 Tender-Bot AI Assistant</h1>
+    <h1>🤖Bot AI Assistant</h1>
     <p>Intelligent Document Analysis & Query System</p>
 </div>
 """, unsafe_allow_html=True)

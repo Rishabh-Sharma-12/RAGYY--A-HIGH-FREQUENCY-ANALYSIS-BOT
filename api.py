@@ -6,7 +6,7 @@ from fastapi import FastAPI ,UploadFile,File,Form
 import collections
 from fastapi.responses import JSONResponse
 
-from main import input_dict, processing_time, query_inputs, rag_pipeline,query_pipe,logger, result
+from config import input_dict, processing_time, rag_pipeline, query_pipe, logger, result
 
 app=FastAPI(title="tendor-Bot RAG API")
 
