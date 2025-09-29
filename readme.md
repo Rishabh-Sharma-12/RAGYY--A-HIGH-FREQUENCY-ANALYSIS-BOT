@@ -3,6 +3,23 @@
 Python-powered bot for PDF ingestion, semantic search, and LLM-based Q&A with an interactive Streamlit dashboard.
 
 ---
+## Demo
+
+## 📸 Dashboard Screenshots
+
+### Main View
+![Main Dashboard](IMG/img1.png)
+
+###
+![Page 1 Overview](IMG/img2.png)
+
+### 
+![Page 2 Summary](IMG/img3.png)
+
+### 
+![Page 3](IMG/img4.png)
+
+---
 
 ## Features ✨
 
